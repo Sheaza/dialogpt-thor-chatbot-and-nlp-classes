@@ -1,0 +1,16 @@
+Valid email addresses
+simple@example.com
+very.common@example.com
+disposable.style.email.with+symbol@example.com
+other.email-with-hyphen@example.com
+fully-qualified-domain@example.com
+user.name+tag+sorting@example.com (may go to user.name@example.com inbox depending on mail server)
+x@example.com (one-letter local-part)
+example-indeed@strange-example.com
+test/test@test.com (slashes are a printable character, and allowed)
+admin@mailserver1 (local domain name with no TLD, although ICANN highly discourages dotless email addresses[10])
+example@s.example (see the List of Internet top-level domains)
+" "@example.org (space between the quotes)
+"john..doe"@example.org (quoted double dot)
+mailhost!username@example.org (bangified host route used for uucp mailers)
+"very.(),:;<>[]\".VERY.\"very@\\ \"very\".unusual"@strange.example.com (include non-letters character AND multiple at sign, the first one being double quoted)

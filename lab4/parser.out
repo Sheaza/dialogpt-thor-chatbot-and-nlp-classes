@@ -1,0 +1,164 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> command
+Rule 1     command -> OPERATE NUMBER article
+Rule 2     command -> HOWMANY article
+Rule 3     attribute -> COLOR
+Rule 4     attribute -> MATERIAL
+Rule 5     attribute -> SIZE
+Rule 6     article -> KIND
+Rule 7     article -> attribute article
+
+Terminals, with rules where they appear
+
+COLOR                : 3
+HOWMANY              : 2
+KIND                 : 6
+MATERIAL             : 4
+NUMBER               : 1
+OPERATE              : 1
+SIZE                 : 5
+error                : 
+
+Nonterminals, with rules where they appear
+
+article              : 1 2 7
+attribute            : 7
+command              : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . command
+    (1) command -> . OPERATE NUMBER article
+    (2) command -> . HOWMANY article
+
+    OPERATE         shift and go to state 2
+    HOWMANY         shift and go to state 3
+
+    command                        shift and go to state 1
+
+state 1
+
+    (0) S' -> command .
+
+
+
+state 2
+
+    (1) command -> OPERATE . NUMBER article
+
+    NUMBER          shift and go to state 4
+
+
+state 3
+
+    (2) command -> HOWMANY . article
+    (6) article -> . KIND
+    (7) article -> . attribute article
+    (3) attribute -> . COLOR
+    (4) attribute -> . MATERIAL
+    (5) attribute -> . SIZE
+
+    KIND            shift and go to state 6
+    COLOR           shift and go to state 8
+    MATERIAL        shift and go to state 9
+    SIZE            shift and go to state 10
+
+    article                        shift and go to state 5
+    attribute                      shift and go to state 7
+
+state 4
+
+    (1) command -> OPERATE NUMBER . article
+    (6) article -> . KIND
+    (7) article -> . attribute article
+    (3) attribute -> . COLOR
+    (4) attribute -> . MATERIAL
+    (5) attribute -> . SIZE
+
+    KIND            shift and go to state 6
+    COLOR           shift and go to state 8
+    MATERIAL        shift and go to state 9
+    SIZE            shift and go to state 10
+
+    article                        shift and go to state 11
+    attribute                      shift and go to state 7
+
+state 5
+
+    (2) command -> HOWMANY article .
+
+    $end            reduce using rule 2 (command -> HOWMANY article .)
+
+
+state 6
+
+    (6) article -> KIND .
+
+    $end            reduce using rule 6 (article -> KIND .)
+
+
+state 7
+
+    (7) article -> attribute . article
+    (6) article -> . KIND
+    (7) article -> . attribute article
+    (3) attribute -> . COLOR
+    (4) attribute -> . MATERIAL
+    (5) attribute -> . SIZE
+
+    KIND            shift and go to state 6
+    COLOR           shift and go to state 8
+    MATERIAL        shift and go to state 9
+    SIZE            shift and go to state 10
+
+    attribute                      shift and go to state 7
+    article                        shift and go to state 12
+
+state 8
+
+    (3) attribute -> COLOR .
+
+    KIND            reduce using rule 3 (attribute -> COLOR .)
+    COLOR           reduce using rule 3 (attribute -> COLOR .)
+    MATERIAL        reduce using rule 3 (attribute -> COLOR .)
+    SIZE            reduce using rule 3 (attribute -> COLOR .)
+
+
+state 9
+
+    (4) attribute -> MATERIAL .
+
+    KIND            reduce using rule 4 (attribute -> MATERIAL .)
+    COLOR           reduce using rule 4 (attribute -> MATERIAL .)
+    MATERIAL        reduce using rule 4 (attribute -> MATERIAL .)
+    SIZE            reduce using rule 4 (attribute -> MATERIAL .)
+
+
+state 10
+
+    (5) attribute -> SIZE .
+
+    KIND            reduce using rule 5 (attribute -> SIZE .)
+    COLOR           reduce using rule 5 (attribute -> SIZE .)
+    MATERIAL        reduce using rule 5 (attribute -> SIZE .)
+    SIZE            reduce using rule 5 (attribute -> SIZE .)
+
+
+state 11
+
+    (1) command -> OPERATE NUMBER article .
+
+    $end            reduce using rule 1 (command -> OPERATE NUMBER article .)
+
+
+state 12
+
+    (7) article -> attribute article .
+
+    $end            reduce using rule 7 (article -> attribute article .)
+
