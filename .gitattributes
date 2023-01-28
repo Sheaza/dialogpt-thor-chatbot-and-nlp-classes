@@ -1,3 +1,13 @@
 *.tab filter=lfs diff=lfs merge=lfs -text
 thor-small/** filter=lfs diff=lfs merge=lfs -text
 chatbot_gpt2/thor-small/** filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/tokenizer.json filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/tokenizer_config.json filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/training_args.bin filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/vocab.json filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/config.json filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/eval_results.txt filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/special_tokens_map.json filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/checkpoint-3500 filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/merges.txt filter=lfs diff=lfs merge=lfs -text
+chatbot_gpt2/thor-small/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
